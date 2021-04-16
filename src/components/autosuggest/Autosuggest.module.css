@@ -1,0 +1,85 @@
+.input {
+	border: 1px solid #dbdbdb;
+	line-height: 2rem;
+	max-width: 400px;
+	width: calc(100% - 16px);
+	border-radius: 4px;
+	padding: 2px 8px;
+}
+
+.input:focus {
+	border-color: #78c0fa;
+	outline: 1px solid transparent;
+}
+
+.container {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2rem;
+	flex-direction: column;
+	position: relative;
+}
+
+.suggestBox {
+	border: 1px solid #dbdbdb;
+	max-width: 416px;
+	width: 100%;
+	margin-top: 2px;
+	max-height: 300px;
+	overflow-y: auto;
+	background-color: #ffffff;
+}
+
+.list {
+	list-style-type: none;
+	padding: 0 10px;
+}
+
+.listItem {
+	padding: 7px 0 7px;
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	color: #7a7a7a;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.listItem:last-child {
+	border-bottom: none;
+}
+
+.marker {
+	width: 30px;
+	height: auto;
+}
+
+.selectedLocation {
+	margin-top: 20px;
+	max-width: 416px;
+	width: 100%;
+	position: absolute;
+	top: 25px;
+	z-index: -1;
+}
+
+.selectedLocationItem {
+	padding: 10px 0;
+}
+
+.selectedLocationItem span {
+	color: #7a7a7a;
+}
+
+@media only screen and (max-device-width: 480px) {
+	.container {
+		width: calc(100% - 30px);
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.selectedLocation {
+		left: 15px;
+		width: calc(100% - 15px);
+	}
+}
